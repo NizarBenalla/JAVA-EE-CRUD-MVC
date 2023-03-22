@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -81,20 +83,20 @@ input[type="submit"]:hover {
 			<h4>Formulaire de modification d'étudiant</h4>
 			<form method="post" action="ModifierEtudiant">
 				<div class="form-group">
-					<label for="cin">CIN :</label> <input type="text" name="cin"
+					<label for="cin" >CIN :</label> <input value = <%=request.getAttribute("c")%> type="text" name="cin"
 						id="cin" required>
 				</div>
 				<div class="form-group">
-					<label for="nom">Nom :</label> <input type="text" name="nom"
+					<label for="nom">Nom :</label> <input value=<%= request.getAttribute("n")%> type="text" name="nom"
 						id="nom" required>
 				</div>
 				<div class="form-group">
-					<label for="prenom">Prénom :</label> <input type="text"
+					<label for="prenom" >Prénom :</label> <input value=<%= request.getAttribute("p") %>  type="text"
 						name="prenom" id="prenom" required>
 				</div>
 				<div class="form-group">
 					<label for="age">Âge :</label> <input type="text" name="age"
-						id="age" required>
+						id="age"   value=<%= request.getAttribute("a") %>  required>
 				</div>
 				<div class="form-group">
 					<label for="niveau">Niveau :</label> <select name="niveau"
