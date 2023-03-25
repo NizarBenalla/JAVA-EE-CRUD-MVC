@@ -26,8 +26,8 @@ ArrayList<Etudiant> mye = GestionEtudiants.getListEtudiants();
 	<div class="container"
 		style="border-radius: 8px; backdrop-filter: blur(20px); background-color: rgba(255, 255, 255, 0.5); box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25); border: 1px solid rgba(255, 255, 255, 0.3);">
 		<button class="btn btn-primary">
-			<a href="NewStudent"
-				style="color: white; text-decoration: none;"> Ajouter </a>
+			<a href="NewStudent" style="color: white; text-decoration: none;">
+				Ajouter </a>
 		</button>
 
 		<h2>Liste des étudiants</h2>
@@ -55,7 +55,7 @@ ArrayList<Etudiant> mye = GestionEtudiants.getListEtudiants();
 					<td><%=etudiant.getAge()%></td>
 					<td><%=etudiant.getNiveau()%></td>
 					<td><a class="btn btn-primary"
-						href="ModifierEtudiant?index=<%=cmp%>">Modifier</a></td>
+						href="ModifierEtudiant?index=<%=cmp%>&c=<%=etudiant.getCin()%>&p=<%=etudiant.getPrenom()%>&n=<%=etudiant.getNom()%>&nv=<%=etudiant.getNiveau()%>&a=<%=etudiant.getAge()%>">Modifier</a></td>
 					<td><a class="btn btn-danger"
 						href="SupprimerEtudiant?index=<%=etudiant.getCin()%>">Supprimer</a></td>
 				</tr>

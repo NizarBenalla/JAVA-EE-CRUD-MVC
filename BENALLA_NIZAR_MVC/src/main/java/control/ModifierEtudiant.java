@@ -23,8 +23,12 @@ public class ModifierEtudiant extends HttpServlet {
 	protected void doGet(final HttpServletRequest request, final HttpServletResponse response)
 			throws ServletException, IOException {
 		this.index = Integer.valueOf(request.getParameter("index"));
-		this.getServletContext().getRequestDispatcher("/WEB-INF/modifierEtudiant.html")
-				.forward((ServletRequest) request, (ServletResponse) response);
+		request.setAttribute("c", request.getParameter("c"));
+		request.setAttribute("p", request.getParameter("p"));
+		request.setAttribute("n", request.getParameter("n"));
+		request.setAttribute("a", request.getParameter("a"));
+
+		this.getServletContext().getRequestDispatcher("/WEB-INF/modifierEtudiant.jsp").forward(request, response);
 	}
 
 	protected void doPost(final HttpServletRequest request, final HttpServletResponse response)
